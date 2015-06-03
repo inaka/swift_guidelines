@@ -1,13 +1,58 @@
-/*: 
+import UIKit
+/*:
 # Optionals
 
-Where possible, strive to keep your properties clean. Avoid explicitly unwrapped optionals, and optionals
+One of the main selling-points of Swift is *type safety*. 
 
-One general exception to this goal is when using `@IBOutlet`s in a `UIView` or `UIViewController`.
+One of the most unsafe bugs we encounter is trying to access a property with the assumption that there is a value assigned, and there isn't one.
+
+Optionals exist to add a level of safety so that one should always know if a property is allowed to be nil, or *must* always have a value.
+
+Properties can be declared as variables (`var`) or constants (`let`). For both of these types of declarations, the property can be:
+
+* Optional (variable)
+
+* Required (constant)
+
+* Optional, but *implicitly unwrapped*
 */
+struct MyExampleStruct {
+	var firstName : String? //Optional
+	let lastName : String // Non-Optional (required. This value **must** be set in the initialization
+	let apiKey : String = "x4Q7sdf" // Non-optional, but initialized during its declaration
+	var gender : String! // Implicitly Unwrapped Optional
+	
+	init(lastname: String) {
+		self.lastName = lastname
+	}
+	init(firstname: String?, lastname: String, gender: String!) {
+		self.firstName = firstname
+		self.lastName = lastname
+		self.gender = gender
+	}
+}
 
-import UIKit
+/*:
+note that the following init will fail, because `apiKey` is a constant (`let`) whose value has already been assigned:
 
+	
+    init(firstname: String?, lastname: String, apikey: String!, gender: String!) {
+        self.firstName = firstname
+        self.lastName = lastname
+        self.apiKey = apikey
+        self.gender = gender
+	}
+	
+*/
+var s = MyExampleStruct(lastname: "Fred")
+var u = MyExampleStruct(firstname: "Howard", lastname: "Duck", gender: "M")
+
+/*:
+
+Where possible, strive to keep your properties safe, meaning `Optional`. Valid reasons for non-safety (*implicitly unwrapped optionals*) are:
+* Instances where you are **absolutely certain** that at runtime, they will never be nil (`@IBOutlet`s are a good example of this.
+* *Lazy vars* (but with caveats, discussed below).
+*/
 /*:
 In a class with explicitly unwrapped optionals, you can get away with not providing an initializer
 */
@@ -60,7 +105,7 @@ struct PersonMixed {
 	}
 	
 	init(dictionary: Dictionary<String, AnyObject>) {
-		let lastname = dictionary["lastname"] as! String
+		let lastname = dictionary["lastname"] as! String //NOTE: are you SURE this dictionary key will always exist? This is a potential bug.
 		self.init(lastname: lastname)
 		if let firstname = dictionary["firstname"] as? String {
 			self.firstname = firstname
@@ -133,7 +178,7 @@ struct MyProperty2 {
 	var firstname: String
 	var lastname: String? {
 		willSet {
-			self.fullname = "\(self.firstname) \(newValue!)"
+			self.lastname = "\(newValue) is a dork!"
 		}
 	}
 	var fullname : String?
@@ -152,7 +197,7 @@ person2.fullname
 ### Lazy vars
 creating a property which is a computed value:
 */
-struct MyProperty3 {
+struct MyThingie3 {
 	let firstname: String
 	let lastname: String
 	lazy var fullname : String = {
@@ -160,8 +205,32 @@ struct MyProperty3 {
 	}()
 }
 //: Note that without a custom initializer, you still must provide a value for all properties, even lazy ones.
-var person3 = MyProperty3(firstname: "Fred", lastname: "Baxter", fullname: nil)
+var person3 = MyThingie3(firstname: "Fred", lastname: "Baxter", fullname: nil)
 person3.fullname
+
+/*:
+#### CAVEAT
+if you have a lazy var containing implicitly unwrapped optional values that are nil, your app **will** crash!
+*/
+struct MyUnsafeLazyThing {
+	var firstname: String!
+	var lastname: String
+	
+	lazy var fullname : String = {
+		return "\(self.firstname) \(self.lastname)"
+		}()
+	
+	init(firstname: String?, lastname: String) {
+		self.firstname = firstname
+		self.lastname = lastname
+	}
+}
+var unsafePerson = MyUnsafeLazyThing(firstname: nil, lastname: "Baxter")
+unsafePerson.fullname // doesn't crash in Playground, but trust me on this one.
+
+var safePerson = MyUnsafeLazyThing(firstname: "Fred", lastname: "Baxter")
+safePerson.fullname
+
 
 /*:
 ### Get and Set full overrides

@@ -20,6 +20,9 @@
       <FileRef
          location = "group:ClassesStructsPerformance.playground">
       </FileRef>
+      <FileRef
+         location = "group:Enums.playground">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
@@ -33,6 +36,13 @@
       name = "4: Maintaining State">
       <FileRef
          location = "group:MaintainingState.playground">
+      </FileRef>
+   </Group>
+   <Group
+      location = "container:"
+      name = "Switching">
+      <FileRef
+         location = "group:Switching.playground">
       </FileRef>
    </Group>
 </Workspace>
