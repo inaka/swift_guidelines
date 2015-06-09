@@ -1,5 +1,6 @@
 import UIKit
 import XCPlayground
+import SwiftTutorialLib
 /*:
 # Learning Swift
 ## Maintaining State
@@ -10,9 +11,9 @@ import XCPlayground
 
 There should be only one source of **truth** for any given [collection] of items, whether they be `classes` or `structs`.
 */
-
 StateManager.manager.people.count
-var kid = Person(name: "Fred Baxter", age: 34, birthday: NSDate())
+var kid = Person(firstName: "Fred", lastName: "Baxter", gender: Gender.Male)
+//Person(name: "Fred Baxter", age: 34, birthday: NSDate())
 StateManager.manager.people.append(kid)
 StateManager.manager.people.count
 StateManager.manager.people.removeAtIndex(0)
@@ -38,11 +39,11 @@ StateManager.manager.people.append(kid)
 //: Note that the item you're looking for must override `==` and declare it to conform to the `Equatable` protocol.
 extension Person : Equatable {}
 public func ==(lhs: Person, rhs: Person) -> Bool {
-	return lhs.name == rhs.name
+	return (lhs.firstName == rhs.firstName) && (lhs.lastName == rhs.lastName)
 }
 
 var kidIndex = StateManager.manager.people.indexOf(kid) // This works!
-var theKidOnTheBlock = Person(name: "Unknown", age: 3, birthday: NSDate())
+var theKidOnTheBlock = Person(firstName: "Ginger", lastName: "Rogers", gender: Gender.Male)
 var anIndex = StateManager.manager.people.indexOf(theKidOnTheBlock) // returns nil because theKidOnTheBlock isn't in the people array.
 StateManager.manager.people.append(theKidOnTheBlock)
 var theIndex = StateManager.manager.people.indexOf(theKidOnTheBlock)

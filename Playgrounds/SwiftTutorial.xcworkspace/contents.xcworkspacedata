@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:MVVM.playground">
+   </FileRef>
    <Group
       location = "container:"
       name = "1: Introduction">
@@ -40,9 +43,15 @@
    </Group>
    <Group
       location = "container:"
-      name = "Switching">
+      name = "Swift Specific">
+      <FileRef
+         location = "group:Functions.playground">
+      </FileRef>
       <FileRef
          location = "group:Switching.playground">
       </FileRef>
    </Group>
+   <FileRef
+      location = "group:SwiftTutorialLib/SwiftTutorialLib.xcodeproj">
+   </FileRef>
 </Workspace>

@@ -3,9 +3,13 @@ Creating Structs vs creating Classes: Performance
 
 You can create structs much quicker than you can create classes.
 */
+
+import Foundation
+import SwiftTutorialLib
+
 var iterationNumber = 100
 
-let comparisonController = ComparisonController()
+let comparisonController = SimplestComparisonController()
 
 var classMean = measure(name: "Classes", iterations: iterationNumber) {
 	comparisonController.createAllClasses(iterationNumber) //1.080059148788452

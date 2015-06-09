@@ -1,6 +1,14 @@
+//
+//  SimplestStruct.swift
+//  SwiftTutorialLib
+//
+//  Created by Tom Ryan on 6/4/15.
+//  Copyright (c) 2015 Inaka Networks. All rights reserved.
+//
+
 import Foundation
 
-public  struct TutorialStruct {
+public  struct SimplestStruct {
 	public var firstVariable : Int
 	
 	public init(firstVariable: Int) {
@@ -12,6 +20,6 @@ public  struct TutorialStruct {
 	}
 }
 
-public func ==(lhs: TutorialStruct, rhs: TutorialStruct) -> Bool {
+public func ==(lhs: SimplestStruct, rhs: SimplestStruct) -> Bool {
 	return lhs.firstVariable == rhs.firstVariable
 }

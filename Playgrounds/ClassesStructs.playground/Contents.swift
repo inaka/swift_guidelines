@@ -1,4 +1,5 @@
 import UIKit
+import SwiftTutorialLib
 /*:
 # Learning Swift
 ## Classes and Structs
@@ -7,7 +8,7 @@ import UIKit
 /*:
 ### Classes are **Reference Types**
 */
-var classTest = TutorialClass(firstVariable: 0)
+var classTest = SimplestClass(firstVariable: 0)
 var classTest2 = classTest
 classTest.firstVariable
 classTest2.firstVariable
@@ -20,19 +21,19 @@ classTest2.firstVariable
 /*:
 ### Structs are **Value Types** 
 */
-var structTest = TutorialStruct(firstVariable: 0)
+var structTest = SimplestStruct(firstVariable: 0)
 var structTest2 = structTest
 structTest.firstVariable
 structTest2.firstVariable
 
 structTest.firstVariable = 2
 
-//: Note that both `structTest.firstVariable` and `structTest2.firstVariable' both have **different** values (**2** and **0**)
+//: Note that both `structTest.firstVariable` and `structTest2.firstVariable` both have **different** values (**2** and **0**)
 structTest.firstVariable
 structTest2.firstVariable
 
 //: Using them
-var tutorialController = TutorialController()
+var tutorialController = SimplestController()
 tutorialController.firstClass
 tutorialController.firstStruct
 /*:
@@ -51,8 +52,8 @@ tutorialController.firstClass.firstVariable = 3
 */
 tutorialController.secondStruct = tutorialController.firstStruct
 tutorialController.secondStruct!.firstVariable = 4
-/*: 
-`changeFirstVariable` must be declared as a `mutating func`.
+//:`changeFirstVariable` must be declared as a `mutating func`.
+/*:
 
     public mutating func changeFirstVariable(newVal : Int) {
         self.firstVariable = newVal
@@ -69,14 +70,16 @@ tutorialController.firstClass
 
 outsideTutorialClass === tutorialController.firstClass
 
+//: Equality
+
 var outsideFirstStruct = tutorialController.firstStruct
 /*: 
 In order for `==` to work with structs, the `==` operator must be overridden **outside** of the struct itself:
 
-    public func ==(lhs: TutorialStruct, rhs: TutorialStruct) -> Bool {
+    public func ==(lhs: SimplestStruct, rhs: SimplestStruct) -> Bool {
         return lhs.firstVariable == rhs.firstVariable
     }
-Because the override is Type-Specific (note the `lhs: TutorialStruct`), multiple overrides of `==` are possible, and indeed necessary -- each override specific to the class or struct.
+Because the override is Type-Specific (note the `lhs: SimplestStruct`), multiple overrides of `==` are possible, and indeed necessary -- each override specific to the class or struct.
 */
 outsideFirstStruct == tutorialController.secondStruct!
 outsideFirstStruct == tutorialController.firstStruct

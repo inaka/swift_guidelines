@@ -4,6 +4,7 @@
 */
 
 import UIKit
+import SwiftTutorialLib
 
 /*: 
 ## Array

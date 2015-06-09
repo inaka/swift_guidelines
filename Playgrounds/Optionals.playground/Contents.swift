@@ -1,4 +1,5 @@
 import UIKit
+import SwiftTutorialLib
 /*:
 # Optionals
 
@@ -154,7 +155,7 @@ There are several ways of providing custom behavior when getting or setting a pr
 ### `didSet`
 
 */
-struct MyProperty {
+struct MyBlah {
 	var firstname : String
 	var lastname : String? {
 		didSet {
@@ -167,7 +168,7 @@ struct MyProperty {
 		self.firstname = firstname
 	}
 }
-var describedPerson = MyProperty(firstname: "Fred")
+var describedPerson = MyBlah(firstname: "Fred")
 describedPerson.lastname = "Baxter"
 describedPerson.jobDescription
 
@@ -244,12 +245,10 @@ class MyUserController {
 	private var _porpoise : Porpoise?
 	var porpoise : Porpoise {
 		get {
-			if let user = self._porpoise {
-				return user
-			} else if let user = Porpoise.load() {
-				return user
+			if let thePorpoise = self._porpoise {
+				return thePorpoise
 			} else {
-				return Porpoise()
+				return Porpoise.load()
 			}
 		}
 		set {
@@ -260,27 +259,16 @@ class MyUserController {
 	init() {
 		self._porpoise = Porpoise.load()
 	}
-	struct Porpoise {
-		var firstname: String!
-		
-		static func load() -> Porpoise? {
-			if let data = NSUserDefaults.standardUserDefaults().objectForKey("SavedUser") as! NSData?, dict = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments, error: nil) as? [String : AnyObject] {
-				var firstname = dict["firstname"] as! String
-				var person = Porpoise(firstname: firstname)
-				
-				return person
-			} else {
-				var porpoise = Porpoise()
-				porpoise.firstname = "Unknown"
-				return porpoise
-			}
-		}
-		static func save(user: Porpoise) {
-			//no-op for the purposes of this demo.
-		}
-	}
+	
 }
 var controller = MyUserController()
 controller
 var controllerPerson = controller.porpoise
+controllerPerson.firstname = "Fred"
+Porpoise.save(controllerPerson)
+var p = Porpoise.load()
+p.firstname
+println(p.firstname)
+
+
 

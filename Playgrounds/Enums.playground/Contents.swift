@@ -6,11 +6,14 @@
 
 import UIKit
 
+//: Plain Enum
+
 enum Direction {
 	case North, South, East, West
 }
 var myDirection = Direction.North
 
+//: Enum with a type and a value
 enum DirectionString : String {
 	case North = "North"
 	case South = "South"
@@ -21,6 +24,7 @@ enum DirectionString : String {
 var myStringDirection = DirectionString.North
 myStringDirection.rawValue
 
+//: Enum with Associated Values
 enum CustomDirection {
 	case North(Direction, DirectionString)
 	case South(Direction, DirectionString)
@@ -58,6 +62,8 @@ case PersonableDirection.North(_, let person):
 }
 
 /*:
+## Example of use in a UITableView
+
 Here is the main enum. Note each case as an associated type, including one optional (there won't always be a co-driver
 */
 public enum ConveyanceItem {
@@ -184,4 +190,3 @@ table.reloadData()
 let coLessDataSource = CodriverlessDataSource()
 table.dataSource = coLessDataSource
 table.reloadData()
-
