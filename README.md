@@ -1,7 +1,7 @@
 Inaka's Swift Coding Guidelines
 ===============================
 
-#### Table of Contents:
+#### Table of Contents
 * **[Rules](rules/index.md)**
   * *Things that must be used as reason to reject a Pull Request.*
 * [Suggestions](suggestions/index.md)
@@ -9,10 +9,18 @@ Inaka's Swift Coding Guidelines
 
 -
 
+#### Bookmarks 
+
+You will find a list of interesting Swift resources [here](bookmarks.md). 
+
+Feel free to collaborate. Pull requests are encouraged.
+
+-
+
 #### Contact Us
 
 - For **questions** or **general comments** regarding the use of this library, please use our public
-[hipchat room](http://inaka.net/hipchat).
+  [hipchat room](http://inaka.net/hipchat).
 
 - If you find any **bugs** or have a **problem** while using this library, please [open an issue](https://github.com/inaka/galgo/issues/new) in this repo (or a pull request :)).
 
