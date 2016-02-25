@@ -49,7 +49,7 @@ List of interesting articles and resources, mostly Swift-related.
 - [What we learned from rewriting our robotic control software in Swift](http://www.sunsetlakesoftware.com/2015/11/03/what-we-learned-rewriting-our-robotic-control-software-swift) by Sunset Lake Software
 - [Swift 2 error handling in practice](http://www.sunsetlakesoftware.com/2015/06/12/swift-2-error-handling-practice) by Sunset Lake Software
 - [Error Handling in Swift 2.0](https://www.bignerdranch.com/blog/error-handling-in-swift-2/)
-- [Swift 2.0: Let's try?](Swift 2.0: Let’s try?) by Natasha The Robot
+- [Swift 2.0: Let's try?](https://www.natashatherobot.com/swift-2-0-try/) by Natasha The Robot
 
 ####Memory Management
 
