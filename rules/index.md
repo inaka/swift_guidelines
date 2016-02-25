@@ -8,7 +8,7 @@ Things that must be used as reason to reject a Pull Request.
 
 Table of Contents:
 
-* [Source Code Layout](/linting.md) --- These set of rules should be checked by a linter tool
+* [Code Syntax](syntax.md) — *Checked by linter tool*
 * [IBAction methods](ib-action-methods.md)
 * [NSNotificationCenter methods](notification-center-methods.md)
 * [Optionals](optionals.md)
