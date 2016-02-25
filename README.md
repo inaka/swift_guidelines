@@ -2,18 +2,18 @@ Inaka's Swift Coding Guidelines
 ===============================
 
 #### Table of Contents
-* **[Rules](rules/index.md)**
+- **[Rules](rules/index.md)**
   * *Things that must be used as reason to reject a Pull Request.*
-* [Suggestions](suggestions/index.md)
+- [Suggestions](suggestions/index.md)
   * *Things that should be considered when writing code, but do not cause a PR rejection, or are too vague to consistently enforce.*
 
 -
 
 #### Bookmarks 
 
-You will find a list of interesting Swift resources [here](bookmarks.md). 
+- You will find a list of interesting Swift resources [here](bookmarks.md). 
 
-Feel free to collaborate. Pull requests are encouraged.
+- Feel free to collaborate. Pull requests are encouraged.
 
 -
 
