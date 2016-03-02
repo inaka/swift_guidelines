@@ -68,6 +68,7 @@ List of interesting articles and resources, mostly Swift-related.
 ####UI/UX
 
 - [Do Not Let Your User See Spinners](https://stanfy.com/blog/do-not-let-your-user-see-spinners/)
+- [Perfect Smooth Scrolling In UITableViews](https://medium.com/ios-os-x-development/perfect-smooth-scrolling-in-uitableviews-fd609d5275a5#.bursiwkfl)
 
 ####Testing
 
