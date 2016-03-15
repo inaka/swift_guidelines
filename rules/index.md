@@ -12,4 +12,4 @@ Table of Contents:
 * [IBAction methods](ib-action-methods.md)
 * [NSNotificationCenter methods](notification-center-methods.md)
 * [Optionals](optionals.md)
-
+* [Privatize](privatize.md)
