@@ -14,44 +14,44 @@ Severity: **Rule**
 
 ```swift
 struct User {
-    
+
     let name: String
     let email: String
-    
+
     func save() {
         User.Defaults.setObject(self.dictionaryValue(), forKey: Keys.SavedUser)
         User.Defaults.synchronize()
     }
-    
+
     static var savedUser: User? {
         guard let dictionary = User.Defaults.objectForKey(Keys.SavedUser) as? [String: AnyObject] else {
             return nil
         }
         return User(dictionary: dictionary)
     }
-    
+
     // MARK: - Private
-    
+
     private static let Defaults = NSUserDefaults.standardUserDefaults()
-    
+
     private struct Keys {
         static let SavedUser = "saved_user"
         static let Name = "name"
         static let Email = "email"
     }
-    
+
 }
 
-// MARK: - Dictionary
+// MARK: - Conversion
 
 private extension User {
-    
+
     init(dictionary: [String: AnyObject]) {
         let name = dictionary[Keys.Name] as! String
         let email = dictionary[Keys.Email] as! String
         self.init(name: name, email: email)
     }
-    
+
     func dictionaryValue() -> [String: AnyObject] {
         return [
             User.Keys.Name: self.name,
@@ -64,8 +64,8 @@ private extension User {
 Notice:
 
 - The usage of a `private struct` to define a group of static strings that should only be known internally.
-- The usage of a `private extension` to group methods that are only used internally within the file.
-- Observe how, by this way, `User` ends up having a concise API:
+- The usage of a `private extension` to group relevant methods that are only used internally within the file.
+- Observe how, by this way, `User` ends up exposing a concise API:
   - `init(name: String, email: String)`, the default implicit initializer as a consequence of being a `struct`.
   - `name` and `email` as read-only properties.
   - `save()` method for saving a user.
