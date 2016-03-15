@@ -9,5 +9,6 @@ Things that should be considered when writing code, but do not cause a PR reject
 Table of Contents:
 
 - [Avoid flags](avoid-flags.md)
+- [Privatize](privatize.md)
 - [Prototype your Storyboards](prototype-storyboards.md)
 
