@@ -6,7 +6,7 @@ Severity: **Rule**
 
 ##### Description
 
-- Everything within a `class` or `struct` that is not intended to be used from the outside should be declared `private`.
+- Everything within a `class` or `struct` that is not intended to be used from the outside must be declared `private`.
 
 -
 
