@@ -76,15 +76,16 @@ List of interesting articles and resources, mostly Swift-related.
 
 - [Bad Testing Practices](https://www.objc.io/issues/15-testing/bad-testing-practices/)
 
+####Dates
+
+- [Online NSDateFormatter](http://nsdateformatter.com/)
+
 ####Miscellanea
 
 - [Covariance and Contravariance](https://mikeash.com/pyblog/friday-qa-2015-11-20-covariance-and-contravariance.html)
 - [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About **Unicode** and Character Sets (No Excuses!)](http://www.joelonsoftware.com/articles/Unicode.html)
 - [Swift 2 SIMD](http://www.russbishop.net/swift-2-simd)
 - [A Practical Introduction to Functional Programming](http://maryrosecook.com/blog/post/a-practical-introduction-to-functional-programming) by Mary Rose Cook
-
-####Dates
-- [Online NSDateFormatter](http://nsdateformatter.com/)
 
 #### Repos
 
