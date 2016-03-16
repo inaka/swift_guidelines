@@ -17,6 +17,7 @@ List of interesting articles and resources, mostly Swift-related.
 
 ####Data Structures
 
+- [Making Friends With Value Types](https://realm.io/news/andy-matuschak-controlling-complexity/) by Andy Matuschak
 - [Swift Associated Types](http://www.russbishop.net/swift-associated-types) by Russbishop
 - [Why Dependent Types Matter](https://jeremywsherman.com/blog/2015/08/26/read-why-dependent-types-matter/)
 - [Property Lists And User Defaults In Swift](http://redqueencoder.com/property-lists-and-user-defaults-in-swift/)
@@ -58,6 +59,7 @@ List of interesting articles and resources, mostly Swift-related.
 
 ####Good Practices
 
+- [Swift's API Design Guidelines](https://swift.org/documentation/api-design-guidelines/) by Apple
 - [Emerging Best Practices in Swift](https://speakerdeck.com/ashfurrow/emerging-best-practices-in-swift-1) by Ash Furrow
 - [Awesome Swift Education](https://github.com/hsavit1/Awesome-Swift-Education)
 - [Hidden Gems in Swift](https://www.netguru.co/blog/hidden-gems-swift)
