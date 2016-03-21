@@ -51,6 +51,7 @@ List of interesting articles and resources, mostly Swift-related.
 - [Swift 2 error handling in practice](http://www.sunsetlakesoftware.com/2015/06/12/swift-2-error-handling-practice) by Sunset Lake Software
 - [Error Handling in Swift 2.0](https://www.bignerdranch.com/blog/error-handling-in-swift-2/)
 - [Swift 2.0: Let's try?](https://www.natashatherobot.com/swift-2-0-try/) by Natasha The Robot
+- [The difference between try, try? and try!](http://bartjacobs.com/error-handling-in-swift-with-the-try-keyword/)
 
 ####Memory Management
 
