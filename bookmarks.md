@@ -8,12 +8,13 @@ List of interesting articles and resources, mostly Swift-related.
 
 ####Protocols
 
+- [Mixins and Traits in Swift 2.0](http://matthijshollemans.com/2015/07/22/mixins-and-traits-in-swift-2/)
 - [iOS 9 Tutorial Series: Protocol-Oriented Programming with UIKit](https://www.captechconsulting.com/blogs/ios-9-tutorial-series-protocol-oriented-programming-with-uikit )
 - [What the 55 Swift Standard Library Protocols Taught Me](https://www.skilled.io/gregheo/what-the-55-swift-standard-library-protocols-taught-me)
 - [Generic Protocols And Their Shortcomings](http://krakendev.io/blog/generic-protocols-and-their-shortcomings) by Krakendev
 - [Swift Protocol Composition](http://natashatherobot.com/swift-protocol-composition/) by Natasha The Robot
 - [Generic Delegate Protocols](http://www.figure.ink/blog/2015/1/18/generic-delegate-protocols)
-- [Mixins and Traits in Swift 2.0](http://matthijshollemans.com/2015/07/22/mixins-and-traits-in-swift-2/)
+- [Type Erased Wrappers in Swift](https://realm.io/news/type-erased-wrappers-in-swift/)
 
 ####Data Structures
 
