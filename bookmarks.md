@@ -57,6 +57,7 @@ List of interesting articles and resources, mostly Swift-related.
 
 - [Weak and Unowned References in Swift](http://krakendev.io/blog/weak-and-unowned-references-in-swift) by Krakendev
 - [Swift Weak References](https://www.mikeash.com/pyblog/friday-qa-2015-12-11-swift-weak-references.html) by Mikeash
+- [Do I Love Or Crash Something? - Shortly on Capture Lists](https://swifting.io/blog/2016/02/28/7-do-i-love-or-crash-something-shortly-on-capture-lists/) by swifting.io
 
 ####Good Practices
 
