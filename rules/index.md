@@ -15,6 +15,7 @@ General:
 
 Specific:
 
+* [Variables Capitalization](variables-capitalization.md)
 * [Acronyms Capitalization](acronyms-capitalization.md)
 * [IBAction methods](ib-action-methods.md)
 * [NSNotificationCenter methods](notification-center-methods.md)
