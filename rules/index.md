@@ -6,9 +6,17 @@ Things that must be used as reason to reject a Pull Request.
 
 ***
 
-Table of Contents:
+General:
 
-* [Code Syntax](syntax.md) — *Checked by linter tool*
+* [Code Syntax](syntax.md) — *Checked by a linter tool (still TBD)*
+* [Swift API design guidelines](https://swift.org/documentation/api-design-guidelines/) — *Must be followed*
+
+
+
+Specific:
+
+* [Variables Capitalization](variables-capitalization.md)
+* [Acronyms Capitalization](acronyms-capitalization.md)
 * [IBAction methods](ib-action-methods.md)
 * [NSNotificationCenter methods](notification-center-methods.md)
 * [Optionals](optionals.md)
