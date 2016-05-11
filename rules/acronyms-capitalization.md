@@ -39,7 +39,7 @@ Bad
 ```swift
 func pathForUrl(URL: NSURL) -> String 
 // First appearance: Wrong. You should never see such camel case scenario ('Url').
-// Seccond appearance: Wrong. Constants should start with Uppercase only if they are static.
+// Second appearance: Wrong. Constants should start with Uppercase only if they are static.
 
 func URLForPath(path: String) -> NSURL	
 // 'URL' goes at the beggining of a function name, it should go lowercase.
