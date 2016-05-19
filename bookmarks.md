@@ -74,6 +74,9 @@ List of interesting articles and resources, mostly Swift-related.
 - [Do Not Let Your User See Spinners](https://stanfy.com/blog/do-not-let-your-user-see-spinners/)
 - [Perfect Smooth Scrolling In UITableViews](https://medium.com/ios-os-x-development/perfect-smooth-scrolling-in-uitableviews-fd609d5275a5#.bursiwkfl)
 
+####Autolayout
+- [Quick tip: Animating Constraints in Your iOS App](https://www.youtube.com/watch?v=ZLPg2InQ44U) by Route 85
+
 ####Testing
 
 - [Bad Testing Practices](https://www.objc.io/issues/15-testing/bad-testing-practices/)
