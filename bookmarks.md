@@ -60,6 +60,11 @@ List of interesting articles and resources, mostly Swift-related.
 - [Swift Weak References](https://www.mikeash.com/pyblog/friday-qa-2015-12-11-swift-weak-references.html) by Mikeash
 - [Do I Love Or Crash Something? - Shortly on Capture Lists](https://swifting.io/blog/2016/02/28/7-do-i-love-or-crash-something-shortly-on-capture-lists/) by swifting.io
 
+####Optimization
+
+- [Swift Build Time Optimizations Part 1](https://medium.com/@RobertGummesson/regarding-swift-build-time-optimizations-fc92cdd91e31#.h3m6ijalb) - [Part 2](https://medium.com/swift-programming/swift-build-time-optimizations-part-2-37b0a7514cbe#.4pdayotjw)
+- [Speeding Up Slow Swift Build Times](https://medium.com/swift-programming/speeding-up-slow-swift-build-times-922feeba5780#.ivvml3ke2)
+
 ####Good Practices
 
 - [Swift's API Design Guidelines](https://swift.org/documentation/api-design-guidelines/) by Apple
