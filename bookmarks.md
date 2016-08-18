@@ -19,6 +19,7 @@ List of interesting articles and resources, mostly Swift-related.
 ####Data Structures
 
 - [Making Friends With Value Types](https://realm.io/news/andy-matuschak-controlling-complexity/) by Andy Matuschak
+- [Managing Consistency of Immutable Models](https://realm.io/news/slug-peter-livesey-managing-consistency-immutable-models/) by Peter Livesey
 - [Swift Associated Types](http://www.russbishop.net/swift-associated-types) by Russbishop
 - [Why Dependent Types Matter](https://jeremywsherman.com/blog/2015/08/26/read-why-dependent-types-matter/)
 - [Property Lists And User Defaults In Swift](http://redqueencoder.com/property-lists-and-user-defaults-in-swift/)
